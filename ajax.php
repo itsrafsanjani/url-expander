@@ -2,6 +2,8 @@
 
 $data = json_decode(file_get_contents('php://input'), true);
 
+header('Content-Type: application/json; charset=utf-8');
+
 if ($data['url']) {
     $url = $data['url'];
     if (!empty($url)) {
